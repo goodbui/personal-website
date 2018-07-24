@@ -24,6 +24,16 @@
   width: auto;
 }
 
+.ok {
+	color: green;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
 #brand-pic {
 	margin-top: 5px;
 	height: 40px;
