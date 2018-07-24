@@ -34,6 +34,10 @@
 	flex-wrap: wrap;
 }
 
+.tooltip.right .tooltip-arrow {
+    border-right-color: blue;
+}
+
 #brand-pic {
 	margin-top: 5px;
 	height: 40px;
