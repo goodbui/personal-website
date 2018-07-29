@@ -8,12 +8,14 @@
 	<title>Noah's Website</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 </head>
 <body>
 
 	<div class="navbar-wrapper">
 	  <div class="container">
-			
+		
+		<!--Navigationsleiste-->
 		<nav class="navbar navbar-inverse navbar-static-top">
 		  <div class="container">
 			<div class="navbar-header">
@@ -58,10 +60,10 @@
 
     <div class="container">
     	<div class="row">
-    		<div class="col-md-5">
+    		<div class="col-md-4">
     			<img src="img/audi.jpg" class="img-responsive center">
     		</div>
-    		<div class="col-md-7">
+    		<div class="col-md-6">
     			<table class="table table-striped">
     				<thead>
     					<tr>
@@ -80,11 +82,11 @@
     					</tr>
     					<tr>
     						<td>Alter</td>
-    						<td>6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+    						<td id="checkbox01">6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span></td>
     					</tr>
     					<tr>
     						<td>Kilometerstand</td>
-    						<td>85'000 KM <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+    						<td id="checkbox02">85'000 KM <span class="glyphicon glyphicon-ok-circle ok"></span></td>
     					</tr>
     					<tr>
     						<td>Leistung</td>
@@ -92,7 +94,7 @@
     					</tr>
     					<tr>
     						<td>Verbrauch</td>
-    						<td>4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+    						<td id="checkbox03">4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span></td>
     					</tr>
     					<tr>
     						<td>Getriebeart</td>
@@ -100,13 +102,31 @@
     					</tr>
     				</tbody>
     			</table>
-    		</div>
-    	</div>
+				</div>
+				
+				<!--Buttons to enable/disable Features-->
+				<div class="col-md-2">
+					<label>
+						<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="checkboxtoggle">
+						Checkboxes
+					</label>
+					<label>
+						<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="tooltiptoggle">
+						Tooltips
+					</label>
+					<label>
+						<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="faqtoggle">
+						FAQ
+					</label>
+
+				</div>
+			</div>
+			
     	<div class="row">
-    		<div class="col-md-5">
+    		<div class="col-md-4">
 
     		</div>	
-    		<div class="col-md-7">
+    		<div class="col-md-6">
     			<div class="well">
     				<p>
     					Die gekennzeichneten <span class="glyphicon glyphicon-ok-circle ok"></span> Daten sind durch das Car Dossier verifiziert.
@@ -115,23 +135,38 @@
     		</div>
     	</div>
     	<div class="row">
-    		<div class="col-md-5">
+    		<div class="col-md-4">
 
     		</div>	
-    		<div class="col-md-7">
+    		<div class="col-md-6">
     			<a href="#" data-placement="right" data-toggle="tooltip" title="Some text">Hover over me</a>
     		</div>
     	</div>
     </div>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
 		$(document).ready(function(){
     		$('[data-toggle="tooltip"]').tooltip();   
 		});
 	</script>
 
+	<script>
+		document.getElementById("checkboxtoggle").onchange = function(){
+			if ($(this).is(":checked")) {
+				document.getElementById("checkbox01").innerHTML = '6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span>';
+				document.getElementById("checkbox02").innerHTML = '85 000 KM <span class="glyphicon glyphicon-ok-circle ok"></span>';
+				document.getElementById("checkbox03").innerHTML = '4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span>';
+			}else{
+				document.getElementById("checkbox01").innerHTML = '6 Jahre';
+				document.getElementById("checkbox02").innerHTML = '85 000 KM';
+				document.getElementById("checkbox03").innerHTML = '4.9 Liter/100km';
+			}
+		}
+	</script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </body>
 </html>
 
