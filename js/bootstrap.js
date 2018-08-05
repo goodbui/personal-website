@@ -2380,6 +2380,7 @@ if (typeof jQuery === 'undefined') {
 // custom code
 // chatbot integration
 
+/*
 (function () {
 	var div = document.createElement("div");
 	document.getElementsByTagName('body')[0].appendChild(div);
@@ -2393,3 +2394,6 @@ if (typeof jQuery === 'undefined') {
 			};
 	});
 }());
+*/
+
+
