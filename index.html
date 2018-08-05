@@ -26,13 +26,14 @@
 				<span class="icon-bar"></span>
 			  </button>
 			  <!-- <a class="navbar-brand" href="#">Noah Zani</a> -->
+			  <!-- <img id="brand-pic" src="img/pablo-small.jpg"> -->
 			  <img id="brand-pic" src="img/pablo-small.jpg">
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 			  <ul class="nav pull-right navbar-nav">
 				<li class="active"><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
-				<li id="faq-entry"><a target="_blank" rel="noopener noreferrer" href="faq.html">FAQ</a></li>
+				<li id="faq-entry" style="display: none;"><a target="_blank" rel="noopener noreferrer" href="faq.html">FAQ</a></li>
 				<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features<span class="caret"></span></a>
 				  <ul class="dropdown-menu">
@@ -42,23 +43,23 @@
 					<li><a href="#">Facebook</a></li>
 					-->
 					<label>
-							<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="checkboxtoggle">
+							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="checkboxtoggle">
 							Checkboxes
 						</label>
 						<label>
-							<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="tooltiptoggle">
+							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="tooltiptoggle">
 							Tooltips
 						</label>
 						<label>
-							<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="faqtoggle">
+							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="faqtoggle">
 							FAQ
 						</label>
 						<label>
-							<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="chatbottoggle">
+							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="chatbottoggle">
 							ChatBot
 						</label>
 						<label>
-							<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="videotoggle">
+							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="videotoggle">
 							Video
 						</label>
 				  </ul>
@@ -104,11 +105,13 @@
     					</tr>
     					<tr>
     						<td>Alter</td>
-    						<td id="checkbox01">6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+							<!-- <td id="checkbox01">6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span></td> -->
+							<td id="checkbox01">6 Jahre</td>
     					</tr>
     					<tr>
     						<td>Kilometerstand</td>
-    						<td id="checkbox02">85'000 KM <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+							<!-- <td id="checkbox02">85'000 KM <span class="glyphicon glyphicon-ok-circle ok"></span></td> -->
+							<td id="checkbox02">85'000 KM</td>
     					</tr>
     					<tr>
     						<td>Leistung</td>
@@ -116,7 +119,8 @@
     					</tr>
     					<tr>
     						<td>Verbrauch</td>
-    						<td id="checkbox03">4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span></td>
+							<!-- <td id="checkbox03">4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span></td> -->
+							<td id="checkbox03">4.9 Liter/100km</td>
     					</tr>
     					<tr>
     						<td>Getriebeart</td>
@@ -124,7 +128,7 @@
     					</tr>
     				</tbody>
 					</table>
-					<div id="checkboxdisclaimer" class="well">
+					<div id="checkboxdisclaimer" style="display: none;" class="well">
     				<p>
     					Die gekennzeichneten <span class="glyphicon glyphicon-ok-circle ok"></span> Daten sind durch das Car Dossier verifiziert.
     				</p>
@@ -134,7 +138,7 @@
 				<!--Buttons to enable/disable Features-->
 				<!--Now removed and in the NavBar-Dropdown-->
 				<div class="col-md-3">
-					<div id="chatbotiframe"><iframe width='250px' height='400px' src='https://webchat.botframework.com/embed/qnabot-test-noah?s=JpzkNCt2AGQ.cwA.f4A.UfmCI5f12zdeeDpWJlUnMWrW906QQVGhICl-Nmk3Lww'></iframe></div>
+					<div id="chatbotiframe" style="display: none;"><iframe width='250px' height='400px' src='https://webchat.botframework.com/embed/qnabot-test-noah?s=JpzkNCt2AGQ.cwA.f4A.UfmCI5f12zdeeDpWJlUnMWrW906QQVGhICl-Nmk3Lww'></iframe></div>
 				</div>
 			</div>
 			
