@@ -27,12 +27,12 @@
 			  </button>
 			  <!-- <a class="navbar-brand" href="#">Noah Zani</a> -->
 			  <!-- <img id="brand-pic" src="img/pablo-small.jpg"> -->
-			  <img id="brand-pic" src="img/pablo-small.jpg">
+			  <img id="brand-pic" src="img/cardossier.PNG">
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 			  <ul class="nav pull-right navbar-nav">
 				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
+				<li id="video-entry" style="display: none;"><a target="_blank" rel="noopener noreferrer" href="about.html">Video</a></li>
 				<li id="faq-entry" style="display: none;"><a target="_blank" rel="noopener noreferrer" href="faq.html">FAQ</a></li>
 				<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features<span class="caret"></span></a>
@@ -42,26 +42,32 @@
 					<li><a href="#">LinkedIn</a></li>
 					<li><a href="#">Facebook</a></li>
 					-->
+					<!--
 					<label>
-							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="checkboxtoggle">
-							Checkboxes
-						</label>
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="tooltiptoggle">
-							Tooltips
-						</label>
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="faqtoggle">
-							FAQ
-						</label>
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="chatbottoggle">
-							ChatBot
-						</label>
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="videotoggle">
-							Video
-						</label>
+						<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="disclaimertoggle">
+						Disclaimer
+					</label>
+					-->
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="checkboxtoggle">
+						Checkboxes
+					</label>
+					<label>
+						<input type="checkbox" disabled data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="tooltiptoggle">
+						Tooltips
+					</label>
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="faqtoggle">
+						FAQ
+					</label>
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="chatbottoggle">
+						ChatBot
+					</label>
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" id="videotoggle">
+						Video
+					</label>
 				  </ul>
 				</li>
 			  </ul>
@@ -129,10 +135,15 @@
     				</tbody>
 					</table>
 					<div id="checkboxdisclaimer" style="display: none;" class="well">
-    				<p>
-    					Die gekennzeichneten <span class="glyphicon glyphicon-ok-circle ok"></span> Daten sind durch das Car Dossier verifiziert.
-    				</p>
-    			</div>
+    					<p>
+    						Die gekennzeichneten <span class="glyphicon glyphicon-ok-circle ok"></span> Daten sind durch das Car Dossier verifiziert.
+						</p>
+					</div>
+					<div id="standarddisclaimer" style="display: block;" class="well">
+						<p>
+							Einige der aufgeführten Daten sind durch das Car Dossier verifiziert.
+						</p>
+					</div>
 				</div>
 				
 				<!--Buttons to enable/disable Features-->
@@ -162,15 +173,29 @@
 	<script>
 		document.getElementById("checkboxtoggle").onchange = function(){
 			var x = document.getElementById("checkboxdisclaimer");
+			var y = document.getElementById("standarddisclaimer");
 			if ($(this).is(":checked")) {
 				document.getElementById("checkbox01").innerHTML = '6 Jahre <span class="glyphicon glyphicon-ok-circle ok"></span>';
 				document.getElementById("checkbox02").innerHTML = '85 000 KM <span class="glyphicon glyphicon-ok-circle ok"></span>';
 				document.getElementById("checkbox03").innerHTML = '4.9 Liter/100km <span class="glyphicon glyphicon-ok-circle ok"></span>';
 				x.style.display = "block";
+				y.style.display = "none";
 			}else{
 				document.getElementById("checkbox01").innerHTML = '6 Jahre';
 				document.getElementById("checkbox02").innerHTML = '85 000 KM';
 				document.getElementById("checkbox03").innerHTML = '4.9 Liter/100km';
+				x.style.display = "none";
+				y.style.display = "block";
+			}
+		}
+	</script>
+
+	<script>
+		document.getElementById("videotoggle").onchange = function(){
+			var x = document.getElementById("video-entry");
+			if ($(this).is(":checked")) {
+				x.style.display = "block";
+			}else{
 				x.style.display = "none";
 			}
 		}
